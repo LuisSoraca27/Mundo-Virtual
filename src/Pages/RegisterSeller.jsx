@@ -63,9 +63,6 @@ const RegisterSeller = () => {
 
     React.useEffect(() => {
         handleErrors();
-        if (!success && !error) {
-            toast.success("10% de descuento en tu primera Recarga");
-        }
     }, [error, success]);
 
     return (
