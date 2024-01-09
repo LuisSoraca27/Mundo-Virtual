@@ -57,7 +57,7 @@ const Profiles = () => {
   const profiles = useSelector((state) => state.profiles.length);
   const isLoadingState = useSelector((state) => state.isLoading);
 
-  console.log(profiles);
+  console.log('prueba')
 
   useEffect(() => {
     dispatch(setBalanceThunk(user?.id));
