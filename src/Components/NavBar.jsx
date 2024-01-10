@@ -1,4 +1,4 @@
-import  { useState } from 'react';
+import  React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../style/navbar.css'; 
 import logo from '../assets/logo.png';
@@ -37,7 +37,10 @@ const NavBar = () => {
     { label: 'Cursos', path: '/courses' },
     { label: 'Mas servicios', path: '/licenses' },
   ];
-
+  
+  React.useEffect(() => {
+    dispatch(setBalanceThunk(user?.id));
+  })
   return (
    <>
     <div className="navbar">
