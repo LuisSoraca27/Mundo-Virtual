@@ -193,6 +193,10 @@
   background: #0b1733;
 }
 
+.background-profenet {
+  background: #8d0613;
+}
+
 .no-available {
   filter: grayscale(100%);
 }

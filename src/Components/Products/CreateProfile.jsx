@@ -97,7 +97,7 @@ const CreateProfile = ({ show, onClose, reCharge }) => {
                                         { name: 'Vix+', value: '7' },
                                         { name: 'Plex', value: '8' },
                                         { name: 'Crunchyroll', value: '9' },
-                                        { name: 'lionsgate+', value: '10' },
+                                        { name: 'El Profenet', value: '10' },
                                         { name: 'Iptv', value: '11' },
                                         { name: 'Apple TV', value: '19' },
                                         { name: 'Pornhub', value: '20' },

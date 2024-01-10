@@ -7,7 +7,6 @@ import amazon_prime from '../assets/img/amazon_prime.png';
 import disney_plus from '../assets/img/disney_plus_p.webp';
 import hbo from '../assets/img/hbo.png';
 import crunchyroll from '../assets/img/crunchyroll.webp';
-import lionsgate from '../assets/img/lionsgate+.png';
 import paramount_plus from '../assets/img/paramount-plus.png';
 import plex from '../assets/img/plex.png';
 import star_plus from '../assets/img/star-plus.png';
@@ -29,6 +28,7 @@ import canva from '../assets/img/canva.png';
 import pornhub from '../assets/img/pornhub.png';
 import xbox from '../assets/img/xbox.png';
 import acorntv from '../assets/img/acorntv.png';
+import profenet from '../assets/img/profenet.png';
 import iptv from '../assets/img/iptv.webp';
 
 const Account = () => {
@@ -39,7 +39,7 @@ const Account = () => {
         'disney_plus': [disney_plus, 'Disney Plus'],
         'hbo_max': [hbo, 'HBO MAX'],
         'crunchyroll': [crunchyroll, 'Crunchyroll'],
-        'lionsgate_plus': [lionsgate, 'Lionsgate+'],
+        'profenet': [profenet, 'El profenet'],
         'paramount_plus': [paramount_plus, 'Paramount+'],
         'vix': [vix, 'Vix+'],
         'plex': [plex, 'Plex'],

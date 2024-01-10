@@ -10,7 +10,6 @@ import amazon_prime from '../assets/img/amazon_prime.png';
 import disney_plus from '../assets/img/disney_plus_p.webp';
 import hbo from '../assets/img/hbo.png';
 import crunchyroll from '../assets/img/crunchyroll.webp';
-import lionsgate from '../assets/img/lionsgate+.png';
 import paramount_plus from '../assets/img/paramount-plus.png';
 import plex from '../assets/img/plex.png';
 import star_plus from '../assets/img/star-plus.png';
@@ -22,6 +21,7 @@ import apple_tv from '../assets/img/apple_tv.png';
 import brazzers from '../assets/img/brazzers.png';
 import mubi from '../assets/img/mubi.png';
 import rakuten from '../assets/img/rakuten.png';
+import profenet from '../assets/img/profenet.png';
 import { setIsLoading } from '../features/isLoading/isLoadingSlice';
 import ModalProfile from './ModalProfile';
 import { setBalanceThunk } from '../features/balance/balanceSlice';
@@ -32,7 +32,7 @@ const categoryImageMap = {
   'disney_plus': [disney_plus, 'Disney Plus'],
   'hbo_max': [hbo, 'HBO MAX'],
   'crunchyroll': [crunchyroll, 'Crunchyroll'],
-  'lionsgate_plus': [lionsgate, 'Lionsgate+'],
+  'profenet': [profenet, 'El profenet'],
   'paramount_plus': [paramount_plus, 'Paramount+'],
   'vix': [vix, 'Vix+'],
   'plex': [plex, 'Plex'],
@@ -57,7 +57,7 @@ const Profiles = () => {
   const profiles = useSelector((state) => state.profiles.length);
   const isLoadingState = useSelector((state) => state.isLoading);
 
-  console.log('prueba')
+  console.log(profiles);
 
   useEffect(() => {
     dispatch(setBalanceThunk(user?.id));

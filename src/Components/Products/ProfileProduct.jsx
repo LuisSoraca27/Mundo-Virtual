@@ -19,7 +19,7 @@ const ProfileProduct = () => {
         { name: 'Vix+', value: 'vix' },
         { name: 'Plex', value: 'plex' },
         { name: 'Crunchyroll', value: 'crunchyroll' },
-        { name: 'lionsgate+', value: 'lionsgate_plus' },
+        { name: 'El Profenet', value: 'profenet' },
         { name: 'IPTV', value: 'iptv' },
         { name: 'Apple TV', value: 'apple_tv' },
         { name: 'Pornhub', value: 'pornhub' },

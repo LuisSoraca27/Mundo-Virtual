@@ -91,7 +91,7 @@ const CreateAccount = ({ show, onClose, reCharge }) => {
                                     { label: 'Vix+', value: '7' },
                                     { label: 'Plex', value: '8' },
                                     { label: 'Crunchyroll', value: '9' },
-                                    { label: 'lionsgate+', value: '10' },
+                                    { label: 'El profenet', value: '10' },
                                     { label: 'Iptv', value: '11' },
                                     { label: 'Youtube Premium', value: '12' },
                                     { label: 'Tidal', value: '13' },
