@@ -5,11 +5,17 @@ import logo from '../assets/logo.png';
 import { useMediaQuery } from 'react-responsive';
 import SidebarLeft from './SidebarLeft';
 import SidebarRight from './SidebarRight';
+import { useSelector, useDispatch } from 'react-redux';
+import { setBalanceThunk } from '../features/balance/balanceSlice';
 
 const NavBar = () => {
   const [activeItem, setActiveItem] = useState('profiles');
 
   const user = JSON.parse(localStorage.getItem('user'));
+
+  const dispatch = useDispatch();
+
+  const balance = useSelector((state) => state.balance);
 
   const isMobile = useMediaQuery({ maxWidth: 800 });
 
@@ -21,7 +27,7 @@ const NavBar = () => {
 
   const handleItemClick = (item) => {
     setActiveItem(item);
-    // Puedes realizar otras acciones aquí al hacer clic en un elemento
+    dispatch(setBalanceThunk(user?.id));
   };
 
   const menuItems = [
@@ -64,7 +70,7 @@ const NavBar = () => {
       </ul>
      {user?.role === 'seller' && (
         <div className="balance-bar">
-        <p>Saldo: ${user?.balance}</p>
+        <p>Saldo: ${balance}</p>
       </div>
      )}
      {

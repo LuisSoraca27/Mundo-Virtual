@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import { Button } from 'primereact/button';
-import { Form } from 'react-bootstrap';
 import { createComboThunk } from '../../features/user/comboSlice'
 import { useDispatch, useSelector } from 'react-redux';
 import Swal from 'sweetalert2';
@@ -169,7 +168,7 @@ form.append('profiles', JSON.stringify(profiles));
  
                 <div className="container-form-combos">
                     <div className='colum-form-1'>
-                        <Form encType='multipart/form-data'>
+                        <form encType='multipart/form-data'>
                             <div
                                 style={{ width: '100%', marginBottom: '20px' }}
                             >
@@ -230,7 +229,7 @@ form.append('profiles', JSON.stringify(profiles));
 </div>
 
 
-                        </Form>
+                        </form>
                     </div>
                     <div className='colum-form-2'>
                         
