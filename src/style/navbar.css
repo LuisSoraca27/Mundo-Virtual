@@ -86,4 +86,16 @@
   .navmenu {
     display: none;
   }
+
+  .navbar {
+    height: 70px;
+    overflow: hidden;
+  }
+
+  .logo img {
+    width: 75%;
+    position: relative;
+    top: -5px;
+    left: -55px;
+  }
 }

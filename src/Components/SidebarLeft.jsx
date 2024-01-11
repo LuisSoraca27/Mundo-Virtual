@@ -4,7 +4,7 @@ import { Button } from 'primereact/button';
 import { Sidebar } from 'primereact/sidebar';
 import { useNavigate } from 'react-router-dom';
 import { useAuthContext } from '../context/AuthContext';
-import logo from '../assets/logo.png';
+import logo from '../assets/logo_2.jpg';
 
 // eslint-disable-next-line react/prop-types
 const SidebarLeft = ({ visible, onHide }) => {
@@ -71,7 +71,7 @@ const SidebarLeft = ({ visible, onHide }) => {
         <Sidebar visible={visible} onHide={onHide} position="left">
             <div className='content-menu' style={{width:'100%'}}>
             <div className="content-header">
-                <img src={logo} alt="Logo" width='150px' />
+                <img src={logo} alt="Logo" width='178px0px' />
             </div>
             <div className='content-nav'>
                 {/* <Menu

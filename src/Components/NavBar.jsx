@@ -1,7 +1,7 @@
 import  React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../style/navbar.css'; 
-import logo from '../assets/logo.png';
+import logo from '../assets/logo_2.jpg';
 import { useMediaQuery } from 'react-responsive';
 import SidebarLeft from './SidebarLeft';
 import SidebarRight from './SidebarRight';
