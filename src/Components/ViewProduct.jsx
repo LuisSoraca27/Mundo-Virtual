@@ -14,7 +14,8 @@ const ViewProduct = ({
     setShow,
     handleEdit,
     isEdit,
-    seeEmail
+    seeEmail,
+    handleExcel,
 }) => {
     return (
         <>
@@ -38,9 +39,18 @@ const ViewProduct = ({
                         severity="success"
                         icon="pi pi-plus"
                     />
+                    {
+                        seeEmail && <Button
+                            label="Subir Excel"
+                            onClick={() => handleExcel()}
+                            severity="success"
+                            icon="pi pi-upload"
+                            style={{ marginLeft: '10px' }}
+                        />
+                    }
                 </div>
             </div>
-            <DataTable value={products} paginator={true} rows={10} size="small">
+            <DataTable value={products}  size="small">
                 <Column field="name" header="Nombre" />
                 <Column field="description" header="Descripción" />
                 <Column field="price" header="Precio" />

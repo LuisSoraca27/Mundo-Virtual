@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import Swal from 'sweetalert2';
 import CreateProfile from './CreateProfile';
 import EditProfile from './EditProfile';
+import UploadExcel from '../UploadExcel';
 
 const ProfileProduct = () => {
 
@@ -19,7 +20,7 @@ const ProfileProduct = () => {
         { name: 'Vix+', value: 'vix' },
         { name: 'Plex', value: 'plex' },
         { name: 'Crunchyroll', value: 'crunchyroll' },
-        { name: 'El Profenet', value: 'profenet' },
+        { name: 'EL ProfeNet', value: 'profenet' },
         { name: 'IPTV', value: 'iptv' },
         { name: 'Apple TV', value: 'apple_tv' },
         { name: 'Pornhub', value: 'pornhub' },
@@ -39,6 +40,9 @@ const ProfileProduct = () => {
 
     // Estado para el modal editar
     const [openEdit, setOpenEdit] = useState(false);
+
+    // Estado para el modal crear desde excel
+    const [openExcel, setOpenExcel] = useState(false);
 
     const handleEdit = (data) => {
         setDataProfile(data)
@@ -91,6 +95,14 @@ const ProfileProduct = () => {
 
     return (
         <>
+        <UploadExcel
+            show={openExcel}
+            onClose={() => setOpenExcel(false)}
+            reCharge={() => setReload(!reload)}
+            url='profile/uploadexcelprofile'
+        />
+
+
             <EditProfile
                 show={openEdit}
                 onClose={() => setOpenEdit(false)}
@@ -111,6 +123,7 @@ const ProfileProduct = () => {
                 handleDelete={handleDelete}
                 handleEdit={handleEdit}
                 setShow={setShow}
+                handleExcel={() => setOpenExcel(true)}
                 isEdit={true}
                 seeEmail={true}
             />

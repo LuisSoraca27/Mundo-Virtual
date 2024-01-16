@@ -5,6 +5,7 @@ import ViewProduct from '../ViewProduct';
 import Swal from 'sweetalert2';
 import CreateAccount from './CreateAccount';
 import EditAccount from './EditAccount';
+import UploadExcel from '../UploadExcel';
 
 const AccountProduct = () => {
 
@@ -23,7 +24,7 @@ const AccountProduct = () => {
         { name: 'Vix+', value: 'vix' },
         { name: 'Plex', value: 'plex' },
         { name: 'Crunchyroll', value: 'crunchyroll' },
-        { name: 'El Profenet', value: 'profenet' },
+        { name: 'El profeNet', value: 'profenet' },
         { name: 'Tidal', value: 'tidal' },
         { name: 'youtube premium', value: 'youtube' },
         { name: 'Deezer', value: 'deezer' },
@@ -42,18 +43,19 @@ const AccountProduct = () => {
     const dispatch = useDispatch()
     const accounts = useSelector(state => state.accounts.accounts)
 
-
     // Estado para los datos de la cuenta
     const [dataAccount, setDataAccount] = useState({})
 
     // Estado para el modal editar
     const [openEdit, setOpenEdit] = useState(false);
 
+      // Estado para el modal crear desde excel
+      const [openExcel, setOpenExcel] = useState(false);
+
     const handleEdit = (data) => {
         setDataAccount(data)
         setOpenEdit(true)
     }
-
 
     const handleCategory = (e) => {
         setCategoryPerfiles(e.target.value)
@@ -92,6 +94,13 @@ const AccountProduct = () => {
 
     return (
         <>
+           <UploadExcel
+            show={openExcel}
+            onClose={() => setOpenExcel(false)}
+            reCharge={() => setReload(!reload)}
+            url='account/uploadexcelaccount'
+        />
+
             <EditAccount
                 data={dataAccount}
                 show={openEdit}
@@ -110,6 +119,7 @@ const AccountProduct = () => {
                 handleCategory={handleCategory}
                 handleEdit={handleEdit}
                 handleDelete={handleDelete}
+                handleExcel={() => setOpenExcel(true)}
                 setShow={setShow}
                 isEdit={true}
                 seeEmail={true}
