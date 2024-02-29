@@ -83,7 +83,7 @@ const CreateAccount = ({ show, onClose, reCharge }) => {
                             options={
                                 [
                                     { label: 'Netflix', value: '2' },
-                                    { label: 'HBO', value: '3' },
+                                    { label: 'Max', value: '3' },
                                     { label: 'Disney Plus', value: '4' },
                                     { label: 'Amazon Prime Video', value: '1' },
                                     { label: 'Star+', value: '5' },

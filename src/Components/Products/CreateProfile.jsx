@@ -89,7 +89,7 @@ const CreateProfile = ({ show, onClose, reCharge }) => {
                                     {...register('categoryId', { required: true })}
                                     options={[
                                         { name: 'Netflix', value: '2' },
-                                        { name: 'HBO', value: '3' },
+                                        { name: 'Max', value: '3' },
                                         { name: 'Disney Plus', value: '4' },
                                         { name: 'Amazon Prime Video', value: '1' },
                                         { name: 'Star+', value: '5' },

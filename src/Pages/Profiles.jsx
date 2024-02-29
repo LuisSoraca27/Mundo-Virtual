@@ -30,7 +30,7 @@ const categoryImageMap = {
   'netflix': [netflix, 'Netflix'],
   'amazon_prime': [amazon_prime, 'Amazon Prime Video'],
   'disney_plus': [disney_plus, 'Disney Plus'],
-  'hbo_max': [hbo, 'HBO MAX'],
+  'hbo_max': [hbo, 'Max'],
   'crunchyroll': [crunchyroll, 'Crunchyroll'],
   'profenet': [profenet, 'El profenet'],
   'paramount_plus': [paramount_plus, 'Paramount+'],

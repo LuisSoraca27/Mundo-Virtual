@@ -110,7 +110,7 @@
 }
 
 .background-hbo_max {
-  background: linear-gradient(to bottom, #4d1aa7, #4047d5);
+  background: radial-gradient( #0034fe, #000066);
 }
 
 .background-star_plus {

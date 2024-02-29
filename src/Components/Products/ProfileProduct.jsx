@@ -11,7 +11,7 @@ const ProfileProduct = () => {
 
     const optionsCategory = [
         { name: 'Netflix', value: 'netflix' },
-        { name: 'HBO', value: 'hbo_max' },
+        { name: 'Max', value: 'hbo_max' },
         { name: 'Disney Plus', value: 'disney_plus' },
         { name: 'amazon Prime Video', value: 'amazon_prime' },
         { name: 'Spotify', value: 'spotify' },
