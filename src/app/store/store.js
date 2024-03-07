@@ -25,5 +25,5 @@ export const store = configureStore({
         orders: OrdersSlice,
         notification: notificationSlice,
     },
-
+    devTools: false
 })
