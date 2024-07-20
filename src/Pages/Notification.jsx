@@ -7,7 +7,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { getNotificationThunk, deleteNotificationThunk } from '../features/notifications/notificationSlice';
 import CustomNotification from '../Components/CustomNotification';
 
-const socket = io.connect('https://mundovirtual-server-production.up.railway.app/');
+const socket = io.connect('https://servidor-mundovirtual-production.up.railway.app/');
 
 const Notification = () => {
     const dispatch = useDispatch();

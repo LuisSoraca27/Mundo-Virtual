@@ -109,7 +109,7 @@ const Order = () => {
             <Column field="username" header="Comprador" />
             <Column field="priceProduct" header="Precio" />
             <Column field="createdAt" header="Fecha de Compra" body={createdAtTemplate} />
-            <Column body={(rowData) => <Button disabled label="Ver detalles" onClick={() => handleShow(rowData)} className="p-button-rounded p-button-info" />} />
+            <Column body={(rowData) => <Button label="Ver detalles" onClick={() => handleShow(rowData)} className="p-button-rounded p-button-info" />} />
           </DataTable>
         </div>
       </div>

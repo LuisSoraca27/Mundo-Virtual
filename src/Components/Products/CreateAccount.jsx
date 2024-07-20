@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { Button } from 'primereact/button';
 import { Dialog } from 'primereact/dialog';
@@ -83,10 +83,10 @@ const CreateAccount = ({ show, onClose, reCharge }) => {
                             options={
                                 [
                                     { label: 'Netflix', value: '2' },
-                                    { label: 'HBO', value: '3' },
+                                    { label: 'Max', value: '3' },
                                     { label: 'Disney Plus', value: '4' },
                                     { label: 'Amazon Prime Video', value: '1' },
-                                    { label: 'Star+', value: '5' },
+                                    { label: 'Disney+ Premium', value: '5' },
                                     { label: 'Paramount+', value: '6' },
                                     { label: 'Vix+', value: '7' },
                                     { label: 'Plex', value: '8' },

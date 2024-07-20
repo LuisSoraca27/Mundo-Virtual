@@ -8,8 +8,7 @@ import disney_plus from '../assets/img/disney_plus_p.webp';
 import hbo from '../assets/img/hbo.png';
 import crunchyroll from '../assets/img/crunchyroll.webp';
 import paramount_plus from '../assets/img/paramount-plus.png';
-import plex from '../assets/img/plex.png';
-import star_plus from '../assets/img/star-plus.png';
+import plex from '../assets/img/plex.png';;
 import vix from '../assets/img/vix.png';
 import spotify from '../assets/img/spotify.webp';
 import tidal from '../assets/img/tidal.png';
@@ -30,6 +29,7 @@ import xbox from '../assets/img/xbox.png';
 import acorntv from '../assets/img/acorntv.png';
 import profenet from '../assets/img/profenet.png';
 import iptv from '../assets/img/iptv.webp';
+import dpremium from '../assets/img/dpremium.png';
 
 const Account = () => {
 
@@ -37,13 +37,12 @@ const Account = () => {
         'netflix': [netflix, 'Netflix'],
         'amazon_prime': [amazon_prime, 'Amazon Prime Video'],
         'disney_plus': [disney_plus, 'Disney Plus'],
-        'hbo_max': [hbo, 'HBO MAX'],
+        'hbo_max': [hbo, 'Max'],
         'crunchyroll': [crunchyroll, 'Crunchyroll'],
         'profenet': [profenet, 'El profenet'],
         'paramount_plus': [paramount_plus, 'Paramount+'],
         'vix': [vix, 'Vix+'],
         'plex': [plex, 'Plex'],
-        'star_plus': [star_plus, 'Star+'],
         'iptv': [iptv, 'IPTV'],
         'apple_tv': [apple_tv, 'Apple TV'],
         'pornhub': [pornhub, 'Pornhub'],
@@ -59,6 +58,7 @@ const Account = () => {
         'xbox': [xbox, 'Xbox'],
         'apple_music': [apple_music, 'Apple Music'],
         'xbox_pass': [xbox, 'Xbox'],
+        'Dpremium': [dpremium, 'Dpremium'],
     };
 
     const user = JSON.parse(localStorage.getItem('user'));

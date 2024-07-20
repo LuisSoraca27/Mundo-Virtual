@@ -12,7 +12,6 @@ import hbo from '../assets/img/hbo.png';
 import crunchyroll from '../assets/img/crunchyroll.webp';
 import paramount_plus from '../assets/img/paramount-plus.png';
 import plex from '../assets/img/plex.png';
-import star_plus from '../assets/img/star-plus.png';
 import vix from '../assets/img/vix.png';
 import iptv from '../assets/img/iptv.webp';
 import acorntv from '../assets/img/acorntv.png';
@@ -22,6 +21,7 @@ import brazzers from '../assets/img/brazzers.png';
 import mubi from '../assets/img/mubi.png';
 import rakuten from '../assets/img/rakuten.png';
 import profenet from '../assets/img/profenet.png';
+import dpremium from '../assets/img/dpremium.png';
 import { setIsLoading } from '../features/isLoading/isLoadingSlice';
 import ModalProfile from './ModalProfile';
 import { setBalanceThunk } from '../features/balance/balanceSlice';
@@ -30,13 +30,12 @@ const categoryImageMap = {
   'netflix': [netflix, 'Netflix'],
   'amazon_prime': [amazon_prime, 'Amazon Prime Video'],
   'disney_plus': [disney_plus, 'Disney Plus'],
-  'hbo_max': [hbo, 'HBO MAX'],
+  'hbo_max': [hbo, 'Max'],
   'crunchyroll': [crunchyroll, 'Crunchyroll'],
   'profenet': [profenet, 'El profenet'],
   'paramount_plus': [paramount_plus, 'Paramount+'],
   'vix': [vix, 'Vix+'],
   'plex': [plex, 'Plex'],
-  'star_plus': [star_plus, 'Star+'],
   'iptv': [iptv, 'IPTV'],
   'apple_tv': [apple_tv, 'Apple TV'],
   'pornhub': [pornhub, 'Pornhub'],
@@ -44,6 +43,7 @@ const categoryImageMap = {
   'rakuten': [rakuten, 'Rakuten Viki'],
   'acorntv': [acorntv, 'Acorn TV'],
   'mubi': [mubi, 'Mubi'],
+  'Dpremium': [dpremium, 'Disney+ Premium'],
 };
 
 const Profiles = () => {
