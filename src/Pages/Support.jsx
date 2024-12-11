@@ -4,7 +4,7 @@ import soporte from '../assets/soporte-tecnico.png'
 import whatsapp from '../assets/whatsapp.png'
 import facebook from '../assets/facebook.png'
 import instagram from '../assets/instagram.png'
-import logo from '../assets/logo_2.jpg'
+import logo from '../assets/logo_2.png'
 
 const Support = () => {
     return (

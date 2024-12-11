@@ -7,7 +7,7 @@ import { setIsLoading } from "../features/isLoading/isLoadingSlice";
 import ModalAccount from "./ModalAccount";
 import { setBalanceThunk } from "../features/balance/balanceSlice";
 import netflix from '../assets/img/netflix.png';
-import amazon_prime from '../assets/img/amazon_prime.png';
+import amazon_prime from '../assets/img/amazon_prime.png'; 
 import hbo from '../assets/img/hbo.png';
 import crunchyroll from '../assets/img/crunchyroll.webp';
 import paramount_plus from '../assets/img/paramount-plus.png';
@@ -51,7 +51,6 @@ const Account = () => {
     'youtube': [youtube, 'Youtube'],
     'dezzer': [deezer, 'Deezer'],
     'canva': [canva, 'Canva'],
-    'xbox': [xbox, 'Xbox'],
     'apple_music': [apple_music, 'Apple Music'],
     'Dpremium': [dpremium, 'Dpremium'],
 };
@@ -131,6 +130,7 @@ const Account = () => {
                 case "xbox_pass":
                 case "disney_plus":
                 case "star_plus":
+                case "brazzers":
                   return null;
                 default:
                   return (

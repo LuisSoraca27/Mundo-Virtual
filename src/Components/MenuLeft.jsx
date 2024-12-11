@@ -1,7 +1,7 @@
 import { Menu } from "primereact/menu";
 import { Badge } from "primereact/badge";
 import { Button } from "primereact/button";
-import logo from "../assets/logo.png";
+import logo from "../assets/logo_2.png";
 import "../style/menuLeft.css";
 import { useAuthContext } from "../context/AuthContext";
 import { useNavigate } from "react-router-dom";
