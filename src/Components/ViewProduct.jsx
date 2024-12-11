@@ -10,7 +10,7 @@ import { useDispatch } from "react-redux";
 import {
   fetchCombosByNameThunk, setComboThunk
 } from "../features/user/comboSlice";
-import '../style/Inventory.css';
+import '../style/inventory.css';
 
 
 const ViewProduct = ({
