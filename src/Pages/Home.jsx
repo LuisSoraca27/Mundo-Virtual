@@ -1,12 +1,19 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Messages } from 'primereact/messages';
 import { useDispatch, useSelector } from 'react-redux';
 import { getNotificationThunk } from '../features/notifications/notificationSlice';
+import '../style/home.css';
+import ViewNotificationImg from '../Components/Notifications/ViewNotificationImg';
+
+        
 
 const Home = () => {
     const dispatch = useDispatch();
-    const notifications = useSelector((state) => state.notification);
+    const {notifications} = useSelector((state) => state.notification);
     const msgs = useRef(null);
+
+    const [ visible, setVisible ] = useState(false);
+    const [isCommunityPanelOpen, setIsCommunityPanelOpen] = useState(true);
 
     const notificaciones = notifications.map((notification) => {
         return {
@@ -22,7 +29,7 @@ const Home = () => {
         dispatch(getNotificationThunk());
     }, [dispatch]);
 
-    // Usar un useEffect para mostrar las notificaciones cuando estén disponibles
+
     useEffect(() => {
         if (msgs.current && notificaciones.length > 0) {
             msgs.current.clear();
@@ -30,19 +37,25 @@ const Home = () => {
         }
     }, [notificaciones, msgs.current]);
 
+    useEffect(() => {
+        setVisible(true);
+    }, []);
+
 
     return (
+        <>
+        <ViewNotificationImg/>
         <div className="container-notification">
             <div className="notificationView">
                 <h2>Notificaciones</h2>
                 <p>Conoce nuestras promociones y noticias</p>
                 <hr />
                 <div className="notifications">
-                    {/* Aquí renderizamos el componente Messages de PrimeReact */}
                     <Messages ref={msgs} />
                 </div>
             </div>
         </div>
+        </>
     );
 };
 

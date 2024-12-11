@@ -30,11 +30,6 @@ export const setProfileThunk = () => async (dispatch) => {
         dispatch(setLengthProfile(data))
     } catch (error) {
         console.log(error)
-        if (error.response.data.message === 'Session expired') {
-            localStorage.removeItem('token')
-            localStorage.removeItem('user')
-            window.location.reload()
-        }
     }
 }
 
@@ -85,8 +80,6 @@ export const editProfileThunk = (id, data) => async (dispatch) => {
     }
 }
 
-
-
 export const deleteProfileThunk = (id) => async (dispatch) => {
     try {
         await dksoluciones.delete(`profile/${id}`, getConfig())
@@ -105,8 +98,10 @@ export const purchaseProfileThunk = (id, email, subject) => async (dispatch) => 
     console.log(id)
     try {
 
-        await dksoluciones.post(`order/profile/${id}`, { email, subject }, getConfig())
+     const res =  await dksoluciones.post(`order/profile/${id}`, { email, subject }, getConfig())
+        console.log(res.data)
         dispatch(setSuccess(true))
+        dispatch(setProfileThunk())
     } catch (error) {
         console.log(error)
         if (error.response?.data.message === 'Session expired') {
@@ -117,8 +112,6 @@ export const purchaseProfileThunk = (id, email, subject) => async (dispatch) => 
         dispatch(setError(error.response?.data.message))
     }
 }
-
-
 
 
 export const { setLengthProfile, setProfiles } = profileSlice.actions;

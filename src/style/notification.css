@@ -87,3 +87,32 @@
   width: 90%;
   text-align: start;
 }
+
+
+.container-notification-popup {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  width: 450px;
+  height: 500px;
+  padding: 20px;
+  padding-top: 0;
+
+}
+
+.card-notification-popup {
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+.container-imagenes {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 10px;
+  margin: 10px 0;
+  position: relative;
+}

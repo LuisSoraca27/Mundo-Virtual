@@ -1,45 +1,59 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Button } from 'primereact/button';
 import { Dialog } from 'primereact/dialog';
 import { InputText } from 'primereact/inputtext';
 import { useForm } from 'react-hook-form';
-import Swal from 'sweetalert2';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { editUserThunk } from '../features/user/userSlice';
+import { Toast } from 'primereact/toast';
+import useErrorHandler from '../Helpers/useErrorHandler';
 
 const ModalEditUser = ({ open, onClose, recharge, data }) => {
+
+
+    const { error, success } = useSelector((state) => state.error);
+
+    const handleError = useErrorHandler(error, success);
+    const [loading, setLoading] = useState(false);
+
+    const toast = useRef(null);
+
     const dispatch = useDispatch();
     const { register, handleSubmit, setValue } = useForm();
 
     useEffect(() => {
         setValue('username', data?.username || '');
         setValue('email', data?.email || '');
+        setValue('phone', data?.phone || '');
     }, [data, setValue]);
 
     const onSubmit = (formData) => {
+        setLoading(true);
         const editData = {
             username: formData.username,
             email: formData.email,
+            phone: formData.phone,
         };
-
-        dispatch(editUserThunk(editData))
+        dispatch(editUserThunk(editData, data.id))
             .then(() => {
                 setValue('username', '');
                 setValue('email', '');
-                Swal.fire({
-                    icon: 'success',
-                    title: 'Usuario editado correctamente',
-                    showConfirmButton: false,
-                    timer: 1500,
-                });
+                setValue('phone', '');
             })
             .finally(() => {
                 onClose();
-                recharge();
+                setLoading(false);
             });
     };
 
+
+    useEffect(() => {
+        handleError(toast.current);
+    }, [error, success]);
+
     return (
+        <>
+          <Toast ref={toast}/>
         <Dialog
             visible={open}
             onHide={onClose}
@@ -47,7 +61,9 @@ const ModalEditUser = ({ open, onClose, recharge, data }) => {
             header="Editar usuario"
             footer={
                 <div>
-                    <Button label="Confirmar" icon="pi pi-check" severity='success' onClick={handleSubmit(onSubmit)} />
+                    <Button label="Confirmar" icon="pi pi-check" severity='success' onClick={handleSubmit(onSubmit)}
+                     loading={loading} disabled={loading}
+                    />
                 </div>
             }
         >
@@ -79,10 +95,24 @@ const ModalEditUser = ({ open, onClose, recharge, data }) => {
                                 {...register('email', { required: true })}
                             />
                         </div>
+                        <br />
+                        <div className="mb-2">
+                            <label htmlFor="phone">
+                                <span style={{ fontSize: '17px', fontWeight: '400' }}>Telefono</span>
+                            </label>
+                            <InputText
+                                id="phone"
+                                type="phone"
+                                name="phone"
+                                placeholder="Ingrese un numero de telefono"
+                                {...register('phone', { required: true })}
+                            />
+                        </div>
                     </div>
                 </form>
             </div>
         </Dialog>
+        </>
     );
 };
 

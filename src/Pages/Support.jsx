@@ -62,7 +62,7 @@ const Support = () => {
             <div className="footer-support">
 
                 <img src={logo} alt="" />
-                <p>© 2023 Mundo Virtual Streaming. Todos los derechos reservados.</p>
+                <p>© 2024 Mundo Virtual Streaming. Todos los derechos reservados.</p>
                 <p>Dk Soluciones V1.5</p>
             </div>
         </div>

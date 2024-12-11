@@ -7,7 +7,7 @@ const IsLoading = () => {
 
     return (
         <div className='container-spinner'>
-            <ProgressSpinner style={{width: '50px', height: '50px'}} strokeWidth="8" fill="var(--surface-ground)" animationDuration=".5s" />
+        <ProgressSpinner style={{width: '60px', height: '60px'}} strokeWidth="8" fill="var(--surface-ground)" animationDuration=".5s" />
         </div>
     );
 };

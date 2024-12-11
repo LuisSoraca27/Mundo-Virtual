@@ -1,5 +1,5 @@
 import '../style/ContentMenu.css';
-import logo from '../assets/logo_2.jpg';
+import logo from '../assets/logo.png';
 import { Button } from 'primereact/button';
 import { useNavigate } from 'react-router-dom';
 import { useAuthContext } from '../context/AuthContext';
@@ -25,23 +25,19 @@ const ContentMenu = () => {
                     <i className="pi pi-fw pi-home" style={{  fontSize: '25px' }}></i>
                        <span>Inicio</span>
                     </li>
-                    <li onClick={() => HandleNavigate('/users')}>
+                    <li onClick={() => HandleNavigate('/usuarios')}>
                     <i className="pi pi-fw pi-users" style={{ fontSize: '25px' }}></i>
                        <span>Usuarios</span>
                      </li>
-                    <li onClick={() => HandleNavigate('/products')}>
-                    <i className="pi pi-fw pi-shopping-bag" style={{ fontSize: '25px' }}></i>
-                        <span>Productos</span>
-                    </li>
-                    <li onClick={() => HandleNavigate('/notifications')}>
+                    <li onClick={() => HandleNavigate('/notificaciones')}>
                     <i className="pi pi-fw pi-bell" style={{ fontSize: '25px' }}></i>
                         <span>Notificaciones</span>
                      </li>
-                    <li onClick={() => HandleNavigate('/orders')}>
+                    <li onClick={() => HandleNavigate('/pedidos')}>
                     <i className="pi pi-fw pi-shopping-cart" style={{  fontSize: '25px' }}></i>
                        <span>Ventas</span>
                     </li>
-                    <li onClick={() => HandleNavigate('/support')}>
+                    <li onClick={() => HandleNavigate('/soporte')}>
                     <i className="pi pi-fw pi-info-circle" style={{ fontSize: '25px' }}></i>
                         <span>Soporte</span>
                     </li>
@@ -54,11 +50,15 @@ const ContentMenu = () => {
                     <i className="pi pi-fw pi-home" style={{  fontSize: '25px' }}></i>
                        <span>Inicio</span>
                     </li>
-                 <li onClick={() => HandleNavigate('/orders-client')}>
+                    <li onClick={() => HandleNavigate('/mi-perfil')}>
+                       <i className="pi pi-fw pi-user" style={{  fontSize: '25px' }}></i>
+                       <span>Mi cuenta</span>
+                    </li>
+                 <li onClick={() => HandleNavigate('/pedidos-usuarios')}>
                     <i className="pi pi-fw pi-shopping-cart" style={{  fontSize: '25px' }}></i>
                        <span>Mis compras</span>
                 </li>
-                <li onClick={() => HandleNavigate('/support')}>
+                <li onClick={() => HandleNavigate('/soporte')}>
                     <i className="pi pi-fw pi-info-circle" style={{ fontSize: '25px' }}></i>
                         <span>Soporte</span>
                 </li>

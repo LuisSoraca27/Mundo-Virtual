@@ -1,6 +1,6 @@
 .card-profile {
-  width: 230px;
-  height: 320px;
+  width: 210px;
+  height: 300px;
   border-radius: 10px;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.264);
   position: relative;
@@ -49,7 +49,9 @@
 .card-profile strong {
  color: white;
  position: absolute;
- bottom: 30px;
+ bottom: 25px;
+ font-size: 15px;
+ font-weight: 400;
 }
 
 .available {
@@ -61,7 +63,7 @@
   top: 10px;
   right: 10px;
   border: 2px solid #fff;
-  z-index: 1000;
+  z-index: 1;
 }
 
 .card-profile:hover {
@@ -96,8 +98,35 @@
   
 }
 
+.background-canva {
+  background: linear-gradient(to bottom, #00c4cc, #7d2ae7);
+}
+
+.background-calm {
+  background: linear-gradient(to bottom, #3bbdec, #5a58e5);
+}
+
+.background-combo_plus {
+  background: radial-gradient(circle, #2f136a, #051433);
+}
+
+.background-regalo {
+  background: radial-gradient(circle, #4696be,#1945f6);
+}
+
+.background-universal {
+  background: #080808;
+}
+
+.background-duolingo {
+  background: #78c802
+}
 
 .background-netflix {
+  background: #000000;
+}
+
+.background-netflix_extra {
   background: #000000;
 }
 
@@ -105,11 +134,21 @@
   background: #19222d;
 }
 
-.background-disney_plus {
-  background:#0a1646;
+.background-Dbasico {
+  background: linear-gradient(to bottom, #001d2b, #008891);
+}
+.background-Destandar {
+  background: linear-gradient(to bottom, #001d2b, #008891);
+}
+.background-Dpremium {
+  background: linear-gradient(to bottom, #001d2b, #008891);
 }
 
-.background-hbo_max {
+.background-Dpromocion {
+  background: linear-gradient(to bottom, #001d2b, #008891);
+}
+
+.background-max {
   background: radial-gradient( #0034fe, #000066);
 }
 
@@ -126,15 +165,15 @@
 }
 
 .background-plex {
-  background: #060807;
+  background: linear-gradient(to bottom left, #27282b, #000000);
 }
 
 .background-crunchyroll {
   background: linear-gradient(to bottom, #f16700, #f16700);
 }
 
-.background-lionsgate_plus {
-  background: linear-gradient(to bottom, #093543, #030a0d);
+.background-napster {
+  background: linear-gradient(to bottom, #01202f, #037b9d);
 }
 
 .background-spotify {
@@ -150,7 +189,12 @@
 }
 
 .background-iptv {
-  background: #553de4;
+  background: linear-gradient(135deg, #4800bc, #e806a4);
+}
+
+
+.background-iptvmes {
+  background: linear-gradient(135deg, #4800bc, #e806a4);
 }
 
 .background-rakuten {
@@ -163,6 +207,10 @@
 
 .background-dezzer {
   background: linear-gradient(to bottom, #000000, #000000);
+}
+
+.background-tvmia {
+  background: linear-gradient(to right, #00989f, #004c5c);
 }
 
 .background-mubi {
@@ -189,16 +237,45 @@
   background: linear-gradient(to bottom, #107c10, #107c10);
 }
 
-.background-Dpremium {
-  background: linear-gradient(to bottom, #001d2b, #008891);
-}
-
-.background-acorntv {
-  background: #0b1733;
-}
 
 .background-profenet {
-  background: #8d0613;
+  background: #8c0613;
+}
+
+.background-wasender {
+  background: radial-gradient( #2e6667, #153132);
+}
+
+.background-mcafee {
+  background: radial-gradient( #BA171A, #BA171A);
+}
+
+.background-atresplayer {
+  background: radial-gradient( #1C1C1C, #1C1C1C);
+}
+
+.background-wacrm {
+  background: radial-gradient( #4DC239, #4DC239);
+}
+
+.background-crm {
+  background: radial-gradient( #000000, #000000);
+}
+
+.background-wadefender {
+  background: radial-gradient( #f70000, #f70000);
+}
+
+.background-xxx {
+  background: radial-gradient( #c80704, #c80704);
+}
+
+.background-wasender {
+  background: radial-gradient( #2e6667, #153132);
+}
+
+.background-microsoft365 {
+  background: linear-gradient(to bottom, #d7a6e8,#e7caf6,#f3b5f1, #8d80c6);
 }
 
 .no-available {

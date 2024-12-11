@@ -5,7 +5,7 @@ import notificacion from '../assets/audio/notificacion.mp3'
 import useSound from 'use-sound';
 
 
-const socket = io.connect('https://servidor-mundovirtual-production.up.railway.app/')
+const socket = io.connect('https://servidor-dk-soluciones-production.up.railway.app/')
 
 
 const NotificationLogic = () => {

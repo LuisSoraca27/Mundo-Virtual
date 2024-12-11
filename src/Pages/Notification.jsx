@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import  { useEffect, useRef, useState } from 'react';
 import { Button } from 'primereact/button';
 import { Toast } from 'primereact/toast';
 import io from 'socket.io-client';
@@ -6,15 +6,18 @@ import '../style/notification.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { getNotificationThunk, deleteNotificationThunk } from '../features/notifications/notificationSlice';
 import CustomNotification from '../Components/CustomNotification';
+import PopupNotification from '../Components/Notifications/PopupNotification';
 
-const socket = io.connect('https://servidor-mundovirtual-production.up.railway.app/');
+const socket = io.connect('https://servidor-dk-soluciones-production.up.railway.app/');
 
 const Notification = () => {
     const dispatch = useDispatch();
-    const notifications = useSelector((state) => state.notification);
+    const { notifications } = useSelector((state) => state.notification);
     const [notification, setNotification] = useState('');
+    const [visible, setVisible] = useState(false);
     const toast = useRef(null);
 
+    
     const sendNotification = (data) => {
         socket.emit('sendNotification', {
             title: 'Nueva notificación',
@@ -22,7 +25,6 @@ const Notification = () => {
         });
     };
 
-    console.log(notifications);
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -42,7 +44,12 @@ const Notification = () => {
     }, [dispatch]);
 
     return (
-        <div className="container-notification">
+        <>
+        <PopupNotification  
+         visible={visible}
+         setVisible={setVisible}
+        />
+         <div className="container-notification">
             <div className="notificationView">
                 <h2>Notificaciones</h2>
 
@@ -62,6 +69,13 @@ const Notification = () => {
                     label="Enviar"
                     className="p-button-rounded p-button-success"
                     />
+                    <hr />
+                    <Button
+                    type='button'
+                    label='Ventana emergente'
+                    className="p-button-rounded p-button-info"
+                    onClick={() => setVisible(true)}
+                />
                 </form>
                 <hr />
                 <div className="notifications">
@@ -77,6 +91,7 @@ const Notification = () => {
                 </div>
             </div>
         </div>
+        </>
     );
 };
 
