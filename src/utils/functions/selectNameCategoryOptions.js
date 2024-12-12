@@ -1,9 +1,8 @@
 export const optionsCategory = [
   { name: "Netflix", code: "2" },
   { name: "Max", code: "3" },
-  { name: "Disney Plus", code: "4" },
   { name: "Amazon Prime Video", code: "1" },
-  { name: "Star+", code: "5" },
+  { name: "Disney+ Premium", code: "5" },
   { name: "Paramount+", code: "6" },
   { name: "Vix+", code: "7" },
   { name: "Plex", code: "8" },

@@ -55,3 +55,12 @@ body {
 }
 
 
+/* Permitir selección de texto */
+.p-datatable tbody td {
+  user-select: text; /* Habilitar selección de texto */
+  cursor: text; /* Cambiar el cursor a texto seleccionable */
+  -webkit-user-drag: none; /* Prevenir arrastre en navegadores WebKit */
+  user-drag: none; /* Prevenir arrastre general */
+}
+
+

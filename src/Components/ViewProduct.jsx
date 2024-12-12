@@ -118,6 +118,8 @@ const ViewProduct = ({
           value={products}
           globalFilter={globalFilter}
           responsive
+          selectionMode={null}
+          onDragStart={(e) => e.preventDefault()}
         >
           <Column field="name" header="Nombre" />
           <Column field="price" header="Precio" />
